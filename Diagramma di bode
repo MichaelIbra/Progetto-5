@@ -1,1 +1,11 @@
+clc
+clearAllMemoizedCaches
+% Definisci la funzione di trasferimento
+num = [48600]; % Numeratore della funzione di trasferimento
+den = [1 195.4 10878 125820 48600]; % Denominatore della funzione di trasferimento
+G = tf(num, den); % Crea l'oggetto funzione di trasferimento
 
+% Calcola il diagramma di Bode
+figure;
+bode(G);
+grid on;
